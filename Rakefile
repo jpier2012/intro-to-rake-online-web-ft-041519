@@ -15,7 +15,7 @@ task :environment do
 end
 
 desc 'starts console'
-task :console do
+task :console => :environment do
   Pry.start
 end
 
