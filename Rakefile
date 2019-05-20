@@ -1,3 +1,8 @@
+desc 'starts console'
+task :console do
+  Pry.start
+end
+
 namespace :greeting do
   desc 'outputs hola to the terminal'
   task :hola do
@@ -8,11 +13,8 @@ namespace :greeting do
   task :hello do
     puts "hello from Rake!"
   end
+end
 
-  desc 'starts console'
-  task :console do
-    Pry.start
-  end
 
   def :
-end
+
