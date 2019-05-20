@@ -8,4 +8,9 @@ namespace :greeting do
   task :hello do
     puts "hello from Rake!"
   end
+
+  desc 'starts console'
+  def :console do
+    Start.pry
+  end
 end
