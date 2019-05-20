@@ -11,6 +11,6 @@ namespace :greeting do
 
   desc 'starts console'
   def :console do
-    Start.pry
+    Pry.start
   end
 end
