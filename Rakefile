@@ -10,7 +10,9 @@ namespace :greeting do
   end
 
   desc 'starts console'
-  def :console do
+  task :console do
     Pry.start
   end
+
+  def :
 end
