@@ -1,8 +1,3 @@
-desc 'starts console'
-task :console do
-  Pry.start
-end
-
 namespace :greeting do
   desc 'outputs hola to the terminal'
   task :hola do
@@ -15,10 +10,16 @@ namespace :greeting do
   end
 end
 
+task :environment do
+  require_relative './config/environment.rb'
+end
+
+desc 'starts console'
+task :console do
+  Pry.start
+end
+
 namespace :db do
-  task :environment do
-    require_relative './config/environment.rb'
-  end
 
   desc 'migrate the database'
   task :migrate => :environment do
